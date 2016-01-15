@@ -1,17 +1,14 @@
 <?php
-session_star();
+ 	session_start();
 ?>
+<?php
+ if (isset($_SESSION['nombre'])){
+	session_destroy();
+	echo "se ha destrudi sesion exitosamente <br/>";
+	echo "<a href='index.php'>Volver</a>";
+}else{
+	echo "Error....<br/>";
+	echo "<a href='index.php'>Volver</a>";
+}
 
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-	 <meta charset = "utf-8">
-	 <title> PSW + Cookie pagina + nombre </title>
-	 <link type="text/css" rel="stylesheet" href="css/main.css">
-	</head>
-	<body>
-		<header>
-		<section id="">
-		</header>
-	</body>
-</html>
+?>

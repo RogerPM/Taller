@@ -1,22 +1,8 @@
-<?php
-session_star();
+<?php 
+	session_start();
 ?>
-
-<!DOCTYPE html>
-<html lang="es">
-	<head>
-	 <meta charset = "utf-8">
-	 <title> PSW + Cookie pagina + nombre </title>
-	</head>
-	<body>
-		<form action ="datos.php" method ="post">
-		 <fieldset>
-		  <label> Nombre </label>
-		  <input type="text" name = "Nombre"/></br>
-		  <label> Apellido </label>
-		  <input type="text" name = "Apellido"/></br>
-		  <button type = "submit"> Enviar </button>
-		</fieldset>
-	      </form>
-	</body>
-</html>
+<?php
+	$_SESSION['nombre'] = $_POST['nombre'];
+	echo "variable:" .$_SESSION['nombre'];
+	echo "<a href= 'index.php'>Volver</a>";
+?>
